@@ -1,0 +1,59 @@
+#album {
+  width: clamp(300px, 50%, 50rem);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+#polaroids {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0 0;
+}
+
+ .polaroid {
+  background: var(--white);
+  width: clamp(100px, calc(100% / 3), 20rem);
+  padding: .5rem;
+  border: 2px solid var(--black) !important;
+  aspect-ratio: 5 / 6;
+  gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  transition: 500ms;
+
+  & img {
+    width: 100%;
+    border: 1px solid var(--black) !important;
+  }
+
+  &:first-child {
+    transform: rotate(4deg);
+  }
+
+  &:nth-child(2) {
+    transform: translateY(-20px) rotate(-1deg);
+  }
+
+  &:last-child {
+    transform: rotate(-4deg);
+  }
+
+  &:not(:first-child) {
+    margin-left: -.75rem;
+  }
+
+  &:hover {
+    z-index: 10;
+    box-shadow: 0 0 15px var(--dark2) !important;
+    scale: 1.05;
+    transform: rotate(0) translateY(-25px);
+  }
+}
+
+.polaroid_caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
