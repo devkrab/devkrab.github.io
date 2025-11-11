@@ -1,5 +1,8 @@
 * {
-      --icon-size: 5rem;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --icon-size: 5rem;
     --white: #FFFFFF;
     --light: #F7EAD0;
     --bright: #FDD9D9;
@@ -7,6 +10,7 @@
     --dark: #8F6E56;
     --dark2: #422c21;
     --black: #000000;
+    font-family: inherit;
 }
 
 #album {
@@ -15,6 +19,7 @@
   flex-direction: column;
   height: 100%;
   justify-content: center;
+      place-content: center;
 }
 
 #polaroids {
